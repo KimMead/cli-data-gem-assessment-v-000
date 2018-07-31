@@ -16,6 +16,13 @@ class TheatreListingController
 
   def list_movies
     input = ""
-    puts "Please select a theatre."
+    puts "Please select a theatre:"
     input = gets.strip.to_i
+      if Theatre.all.sort {|a, b| a.name <=> b.name}.length >= input && input > 0
+        theatre = Theatre.all.sort {|a, b| a.name <=>}[input-1]
+        theatres = Theatre.all.sort {|a, b| a.name <=> b.name}.length
+      if  theatres >= input && input > 0
+        theatre = theatres[input-1]
+      end
+    end
   end
