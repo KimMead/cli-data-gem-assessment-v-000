@@ -1,4 +1,6 @@
 require 'pry'
+require 'nokogiri'
+
 class TheatreListingController
 
   def call
