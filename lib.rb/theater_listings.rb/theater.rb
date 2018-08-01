@@ -3,7 +3,7 @@ class Theatre
 
   @@all = []
 
-  def initialize(theatre_hash)
+  def initialize(name, address)
     @name = name
     @address = address
     @@all << self
