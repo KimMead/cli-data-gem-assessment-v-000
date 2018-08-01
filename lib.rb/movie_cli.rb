@@ -17,4 +17,16 @@ def call
       else
         puts "Please try again:"
 
+  def list_theatres
+    Theatre.all.sort {|a, b| a.name <=> b.name}.each.with_index(1) do |theatre, index|
+      puts "#{index}. #{theatre.name}"
+    end
+  end
+
+  def list_movies
+    Movie.all.sort {|a, b| a.name <=> b.name}.each.with_index(1) do |movie, index|
+      puts "#{index}. #{movie.name}"
+    end
+  end
+
   end
