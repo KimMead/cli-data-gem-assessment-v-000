@@ -1,4 +1,4 @@
-class Theatre
+class Theater
   attr_accessor :name, address:
 
   @@all = []

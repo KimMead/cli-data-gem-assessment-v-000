@@ -1,4 +1,3 @@
-#!/usr/local/bin ruby
 class CLI
 
   def start
@@ -12,6 +11,7 @@ class CLI
       else puts "Please try again:"
       end
     end
+    Scraper.scrape_theatre_page
   end
 
   def list_theaters(input)
@@ -25,8 +25,3 @@ class CLI
 
     Movie.all.sort {|a, b| a.name <=> b.name}.each.with_index(1) do |movie, index|
       puts "#{index}. #{movie.name}"
-
-
-
-
-  

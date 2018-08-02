@@ -1,7 +1,3 @@
-require 'open-uri'
-require 'pry'
-require 'nokogiri'
-
 class Scraper
 
   BASE_URL = https://www.fandango.com/
@@ -17,7 +13,7 @@ class Scraper
   end
 
   def self.scrape_movie_detail_page
-    doc = Nokogiri::HTML(open(BASE_URL)
+    doc = Nokogiri::HTML(open(BASE_URL))
     doc.css(".fd-movie_title").each do |movie|
       movie_name = movie.css(".movie-title")
       movie_showtimes = movie.css(".movie-showtimes")
