@@ -1,5 +1,5 @@
-class Theater
-  attr_accessor :name, address:
+class TheaterDirectory::Theater
+  attr_accessor :name, :address, :movie_title, :movie_showtime
 
   @@all = []
 
